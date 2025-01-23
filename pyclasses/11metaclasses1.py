@@ -21,3 +21,13 @@ class MyNewClass(metaclass=FirstMeta):
 mynewclass = MyNewClass()
 print(mynewclass.greeting())
 print(mynewclass.name)
+
+# new class with type first class name second base class name third attiributes
+MyClass = type('MyClass', (), {
+    'name': 'Emre',
+    'method': lambda self: print('Greeting!!!')
+})
+
+myClass = MyClass()
+print(myClass.name)
+myClass.method()
